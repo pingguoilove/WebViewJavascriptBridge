@@ -34,6 +34,7 @@ typedef NSDictionary WVJBMessage;
 - (void)sendData:(id)data responseCallback:(WVJBResponseCallback)responseCallback handlerName:(NSString*)handlerName;
 - (void)flushMessageQueue:(NSString *)messageQueueString;
 - (void)injectJavascriptFile;
+- (BOOL)isCorrectProcotocolHost:(NSURL*)url;
 - (BOOL)isCorrectProcotocolScheme:(NSURL*)url;
 - (BOOL)isQueueMessageURL:(NSURL*)urll;
 - (BOOL)isBridgeLoadedURL:(NSURL*)urll;

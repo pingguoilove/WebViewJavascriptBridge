@@ -122,6 +122,14 @@ static int logMaxLength = 500;
     }
 }
 
+- (BOOL)isCorrectProcotocolHost:(NSURL*)url {
+    if([self isBridgeLoadedURL:url] || [self isQueueMessageURL:url]){
+        return YES;
+    } else {
+        return NO;
+    }
+}
+    
 - (BOOL)isCorrectProcotocolScheme:(NSURL*)url {
     if([[url scheme] isEqualToString:kCustomProtocolScheme]){
         return YES;
